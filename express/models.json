@@ -1,0 +1,105 @@
+{
+    "task": {
+        "id": "string",
+        "company": "string",
+        "title": "string",
+        "completed": {
+            "type": "boolean",
+            "default": false
+        },
+        "date_created": "date",
+        "last_changed": {
+            "type": "date",
+            "nullable": true
+        },
+        "assignee": "member",
+        "watchers": {
+            "type": "watcher",
+            "nullable": true
+        },
+        "tags": [
+            "tag"
+        ],
+        "progression": [
+            "bucket"
+        ],
+        "description": "string",
+        "show_description": "boolean",
+        "checklist": [
+            "criterion"
+        ],
+        "show_checklist": "boolean",
+        "comments": [
+            "comment"
+        ],
+        "show_comments": "boolean"
+    },
+    "bucket": {
+        "id": "string",
+        "title": "string",
+        "stage": {
+            "type": "enum",
+            "values": [
+                "Ready",
+                "Started",
+                "Blocked",
+                "Completed"
+            ]
+        },
+        "priority": {
+            "type": "enum",
+            "values": [
+                "Low",
+                "Medium",
+                "High",
+                "Urgent",
+                "Escalated"
+            ]
+        },
+        "start_date": "date",
+        "due_date": "date",
+        "repeating": "boolean"
+    },
+    "member": {
+        "id": "string",
+        "lastname": "string",
+        "firstname": "string",
+        "company": "string",
+        "picture": {
+            "type": "image",
+            "nullable": true
+        }
+    },
+    "tag": {
+        "id": "number",
+        "name": "string",
+        "color": "string"
+    },
+    "task_tag": {
+        "task_id": "string",
+        "tag_id": "number"
+    },
+    "criterion": {
+        "id": "string",
+        "description": "string",
+        "completed": "boolean",
+        "accepted": "boolean"
+    },
+    "comment": {
+        "id": "string",
+        "author": "member",
+        "date_created": "datetime",
+        "content": "string"
+    },
+    "watcher": {
+        "task_id": "string",
+        "member_id": "string",
+        "role": {
+            "type": "enum",
+            "values": [
+                "Secondary",
+                "Observer"
+            ]
+        }
+    }
+}

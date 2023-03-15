@@ -8,3 +8,7 @@
 
 ```npm i @microsoft/microsoft-graph-client connect-flash express-session passport-azure-ad simple-oauth2 node-fetch```
 
+### Running npm command in a different package.json file
+
+```npm --prefix [directory_name] run deploy```
+

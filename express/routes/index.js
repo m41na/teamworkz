@@ -1,9 +1,9 @@
-var express = require('express');
-var home = require('./home');
-var metadata = require('./metadata');
+const express = require("express");
+const home = require("./home");
+const metadata = require("./metadata");
 
-var router = express.Router();
-router.use('/', home);
-router.use('/meta', metadata);
+const router = express.Router();
+router.use("/", home);
+router.use("/meta", metadata);
 
 module.exports = router;
